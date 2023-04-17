@@ -27,7 +27,7 @@
     next = document.querySelector('.buttoms .next'),
     prve = document.querySelector('.buttoms .prve'),
     number = document.querySelector('.buttoms .number');
-    let hadithIndex = 1 ;
+    let hadithIndex = 0 ;
     hadithChanger();
     function hadithChanger() 
     {
@@ -69,23 +69,23 @@
         });
     });
 
-    // let myRequest = new XMLHttpRequest();
-    //         myRequest.open("GET", "opject.json");
-    //         myRequest.send();
-    //         //console.log(myRequest);
-    //         myRequest.onreadystatechange= function(){
-    //             if (this.readyState === 4 && this.status === 200) {
-    //                 let jsData = JSON.parse(this.responseText);
-    //                 //console.log(jsData);
-    //                 for (let i = 0; i < jsData.length; i++) {
-    //                     let div = document.createElement("div");
-    //                     let repoName = document.createTextNode(jsData[0]:name);
-    //                     div.appendChild(repoName);
-    //                     document.body.appendChild(div);
+     let myRequest = new XMLHttpRequest();
+             myRequest.open("GET", "opject.json");
+             myRequest.send();
+             console.log(myRequest);
+             myRequest.onreadystatechange= function(){
+                if (this.readyState === 4 && this.status === 200) {
+                    let jsData = JSON.parse(this.responseText);
+                    console.log(jsData);
+                 for (let i = 0; i < jsData.length; i++) {
+                        let div = document.createElement("div");
+                         let repoName = document.createTextNode(jsData[0]:name);
+                         div.appendChild(repoName);
+                        document.body.appendChild(div);
                         
-    //                 }
-    //             }
-    //         };
+                     }
+                 }
+             };
     
     let qurenContainer = document.querySelector(".quren-container")
     getShorua();
