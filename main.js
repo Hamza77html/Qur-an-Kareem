@@ -27,7 +27,7 @@
     next = document.querySelector('.buttoms .next'),
     prve = document.querySelector('.buttoms .prve'),
     number = document.querySelector('.buttoms .number');
-    let hadithIndex = 0 ;
+    let hadithIndex = 1 ;
     hadithChanger();
     function hadithChanger() 
     {
