@@ -51,6 +51,7 @@
             }
         })
     }
+    
     let sections = document.querySelectorAll("section"),
     links = document.querySelectorAll(".header ul li");
     links .forEach(link => {
@@ -72,11 +73,11 @@
      let myRequest = new XMLHttpRequest();
              myRequest.open("GET", "opject.json");
              myRequest.send();
-             console.log(myRequest);
+             document.querySelector(myRequest);
              myRequest.onreadystatechange= function(){
                 if (this.readyState === 4 && this.status === 200) {
                     let jsData = JSON.parse(this.responseText);
-                    console.log(jsData);
+                    document.querySelector(jsData);
                  for (let i = 0; i < jsData.length; i++) {
                         let div = document.createElement("div");
                          let repoName = document.createTextNode(jsData[0]:name);
